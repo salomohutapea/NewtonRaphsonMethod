@@ -1,14 +1,19 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+
 float f(float x)
 {
     return(pow(1.5, x) - 5);
 }
+
 float df (float x)
 {
     return(pow(1.5, x) * (log(1.5)));
 }
-int main() {
+float main() {
+    double time_spent = 0.0;
+    clock_t begin = clock();
 
     int itr = 1;
     float h, x0 = 10, x1, e = 0.01, rae;
@@ -24,6 +29,10 @@ int main() {
     } while (rae > e);
 
     printf("\nAfter %d iterations, root = %8.6f\n", itr-1, x0);
+
+    clock_t end = clock();
+    time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+    printf("\nTime elpased is %f seconds", time_spent);
 
     return 0;
 }
