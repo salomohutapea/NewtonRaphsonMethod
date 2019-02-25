@@ -12,7 +12,7 @@ int main() {
 
     int itr = 1;
     float h, x0, x1, e;
-    printf("\nEnter x0 dan batas RAE: \n");
+    printf("\nEnter x0 and allowed RAE: \n");
     scanf("%f %f", &x0, &e);
 
     float rae;
@@ -20,8 +20,8 @@ int main() {
         h = f(x0) / df(x0);
         x1 = x0 - h;
         rae = fabs((x1 - x0) / x1);
-        printf("\nIterasi ke-%d    x = %f\n", itr, x1);
-        printf("RAE pada iterasi ke-%d adalah %f\n", itr, rae);
+        printf("\nIteration no-%d    x = %f\n", itr, x1);
+        printf("RAE in iteration no-%d is %f\n", itr, rae);
         x0 = x1;
         itr++;
     } while (rae > e);
