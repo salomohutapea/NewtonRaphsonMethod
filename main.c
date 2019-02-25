@@ -9,6 +9,7 @@ float df (float x)
     return(pow(1.5, x) * (log(1.5)));
 }
 int main() {
+
     int itr = 1;
     float h, x0, x1, e;
     printf("\nEnter x0 dan batas RAE: \n");
