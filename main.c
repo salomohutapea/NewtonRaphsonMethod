@@ -11,10 +11,7 @@ float df (float x)
 int main() {
 
     int itr = 1;
-    float h, x0, x1, e, rae;
-
-    printf("\nEnter x0 and allowed RAE: \n");
-    scanf("%f %f", &x0, &e);
+    float h, x0 = 10, x1, e = 0.01, rae;
 
     do {
         h = f(x0) / df(x0);
