@@ -11,11 +11,11 @@ float df (float x)
 int main() {
 
     int itr = 1;
-    float h, x0, x1, e;
+    float h, x0, x1, e, rae;
+
     printf("\nEnter x0 and allowed RAE: \n");
     scanf("%f %f", &x0, &e);
 
-    float rae;
     do {
         h = f(x0) / df(x0);
         x1 = x0 - h;
@@ -27,5 +27,6 @@ int main() {
     } while (rae > e);
 
     printf("\nAfter %d iterations, root = %8.6f\n", itr-1, x0);
+
     return 0;
 }
