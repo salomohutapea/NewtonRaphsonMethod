@@ -25,7 +25,7 @@ float main() {
         itr++;
     } while (rae > e);
 
-    printf("\nAfter %d iterations, root = %8.6f\n", itr-1, x0);
+    printf("\nAfter %d iterations, root = %f\n", itr-1, x0);
 
     return 0;
 }
