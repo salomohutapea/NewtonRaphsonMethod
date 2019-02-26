@@ -30,6 +30,6 @@ main() {
 
     clock_t stop = clock();
     double elapsed = (double) (stop - start) / CLOCKS_PER_SEC;
-    printf("\nTime elapsed: %.8f\n", elapsed);
+    printf("\nTime elapsed: %.5f\n", elapsed);
     return 0;
 }
