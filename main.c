@@ -13,13 +13,14 @@ double df(double x)
 }
 main() {
     clock_t start = clock();
+
     int itr = 1;
     double a = 10, b, e = 0.01, rae;
 
     do {
 
-        b = a - f(a) / df(a);
-        rae = fabs((b - a) / b);
+        b = a - f(a) / df(a); // Newton Raphson Method formula
+        rae = fabs((b - a) / b); // relative error formula
         printf("\nIteration no-%d    x = %f    f(x) = %f\n", itr, b, f(b));
         printf("RAE in iteration no-%d is %f\n", itr, rae);
         a = b;
